@@ -23,4 +23,7 @@ export class BookService {
   // update book
 
   // delete book
+  deleteBook(id: string) {
+    return this.books.filter((book) => book.id !== id);
+  }
 }

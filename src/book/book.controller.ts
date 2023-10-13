@@ -1,4 +1,4 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Delete, Get } from '@nestjs/common';
 import { BookService } from './book.service';
 
 @Controller('books')
@@ -15,5 +15,11 @@ export class BookController {
   @Get(':id')
   getBookById(id: string) {
     return this.bookService.getBookById(id);
+  }
+
+  // delete book using ID
+  @Delete(':id')
+  deleteBook(id: string) {
+    return this.bookService.deleteBook(id);
   }
 }
