@@ -11,10 +11,20 @@ export class CatService {
   }
 
   // get cats
+  findAllCats(): Cat[] {
+    return this.cats;
+  }
 
   // get a single cat
+  findCat(name: string): Cat {
+    const cat = this.cats.find((cat) => cat.name === name);
+    return cat;
+  }
 
   // update cat
+  // updateCat(id: string) {
+
+  // }
 
   // delete cat
 }
